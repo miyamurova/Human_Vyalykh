@@ -25,7 +25,7 @@ namespace Human_Vyalykh.Elements
         {
             InitializeComponent();
             this.Human = Data as Classes.Human;
-            img.Source = new BitmapImage(new Uri(this.Human.Img));
+            img.Source = new BitmapImage(new Uri(this.Human.Img, UriKind.RelativeOrAbsolute));
             name.Content = this.Human.Name;
             lrace.Content = Data.GetType().Name;
         }

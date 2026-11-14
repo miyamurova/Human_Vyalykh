@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Human_Vyalykh.Classes;
 
 namespace Human_Vyalykh
 {
@@ -20,9 +21,14 @@ namespace Human_Vyalykh
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MediaPlayer MediaPlayer = new MediaPlayer();
+        private Classes.Russian Russian = new Classes.Russian("Александра", @"\Images\ic_russian.png");
+        private Classes.English English = new Classes.English("Alexandra", @"\Images\ic_english.png");
         public MainWindow()
         {
             InitializeComponent();
+            parent.Children.Add(new Elements.Item(Russian));
+            parent.Children.Add(new Elements.Item(English));
         }
     }
 }

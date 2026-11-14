@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Elements\item_english.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,11 +71,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\English.cs" />
     <Compile Include="Classes\Human.cs" />
     <Compile Include="Classes\Phrase.cs" />
     <Compile Include="Classes\Russian.cs" />
     <Compile Include="Elements\Item.xaml.cs">
       <DependentUpon>Item.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\item_english.xaml.cs">
+      <DependentUpon>item_english.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -113,6 +121,9 @@
     <Content Include="Voices\17eb82db6809568fc8775d1c9890e578.mp3" />
     <Content Include="Voices\9b54b53a5277e66ffb6cad56fbb781b0.mp3" />
     <Content Include="Voices\eeeb1b62a55026e0ed91877e9e6da41f.mp3" />
+    <Content Include="Voices\hello.mp3" />
+    <Content Include="Voices\howareyou.mp3" />
+    <Content Include="Voices\mynameis.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
